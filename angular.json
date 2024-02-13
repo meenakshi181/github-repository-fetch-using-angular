@@ -93,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -102,6 +103,7 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": 
+    "c6898691-8cee-4bfe-b5ed-9bc835081265"
   }
 }
