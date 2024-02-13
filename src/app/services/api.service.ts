@@ -18,8 +18,20 @@ export class ApiService {
   //for user profile
   getData(username:string)
   {
-    let url='https://api.github.com/users/${username}';
+    let url=`https://api.github.com/users/${username}`;
+    this.httpClient.get(url).subscribe(
+      {
+        next:(response: any) =>{
+          console.log('api-ser.ts '+ response); // remove
+        },
+        error: (err: any) => {
+          
+        },
+      }
+    )
+   
     return this.httpClient.get(url);
+
 
   }
 

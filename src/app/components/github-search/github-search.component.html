@@ -1,39 +1,33 @@
-<div class="container card-body mt-4">
-    <div class="card">
-      <div class="card-header">
-        <font [size]="4"><b> Search GitHub Repositories</b></font>
-      </div>
-      <div class="card-body">
-  
-        <form class="d-flex" (ngSubmit)="searchUser()">
-          
-            <div class="">
-              <i class="fa fa-github fa-3x" aria-hidden="true"></i>
-            </div>
-            &nbsp;&nbsp;
-            <div class="col-sm-3 mt-1">
-            <input [(ngModel)]="inputGithubUser" name="user" class="form-control" type="search"
-              placeholder="GitHub Username" id="validationDefault01">
-            </div>
-          &nbsp;&nbsp;
-          <div *ngIf="inputGithubUser!='' ; else elseBlock" class="col-auto mt-1">
-            <button type="submit" value="Search" class="btn btn-success">Search
-              </button>
-          </div>
-          <ng-template #elseBlock>
-            <div class="col-auto mt-1">
-              <button type="submit" value="Search" class="btn btn-secondary" disabled>Search
-                </button>
-            </div>
-         </ng-template>
-  
-          <!-- {{inputGithubUser}} -->
-        </form>
-  
-      </div>
+<div class="container mx-auto mt-4">
+  <div class="border shadow-md rounded-md">
+    <div class="bg-blue-400 rounded-t-md p-2">
+      <font [size]="4"><b> Search GitHub Repositories</b></font>
     </div>
-    <div>
+    <div class="p-2">
+
+      <form class="flex gap-4" (ngSubmit)="searchUser()">
+        <div class="col-sm-3 mt-1">
+          <input [(ngModel)]="inputGithubUser" name="user" class="form-control border shadow rounded p-2" type="search"
+            placeholder="GitHub Username" id="validationDefault01">
+        </div>
+        
+        <div *ngIf="inputGithubUser!='' ; else elseBlock"
+          class="flex items-center">
+          <button type="submit" value="Search" class="bg-blue-600 text-white rounded-md hover:bg-blue-800 hover:shadow-md p-2">Search
+          </button>
+        </div>
+        <ng-template #elseBlock>
+          <div class=" flex items-center">
+            <button type="submit" value="Search" class="bg-neutral-100 rounded-md p-2" disabled>Search
+            </button>
+          </div>
+        </ng-template>
+
+        <!-- {{inputGithubUser}} -->
+      </form>
+
     </div>
   </div>
-  
-  
+  <div>
+  </div>
+</div>

@@ -53,6 +53,7 @@ export class GithubProfileComponent implements OnChanges {
         this.profileFetching = true;
       },
     });
+    console.log('git-pro-com.ts ' + this.data) // remove
   }
 
   
