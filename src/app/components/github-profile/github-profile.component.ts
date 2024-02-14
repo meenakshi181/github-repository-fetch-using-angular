@@ -23,6 +23,8 @@ export class GithubProfileComponent implements OnChanges {
   tableSize: number = 10;
   tableSizes: any = [5, 10, 15, 20 ];
 
+   
+
  // Injecting the Github Service
   constructor(private user: ApiService ) {}
   
@@ -44,6 +46,7 @@ export class GithubProfileComponent implements OnChanges {
 
 
   dataList():void{
+    
     this.user.getData(this.username).subscribe({
       next:(response: any) =>{
         this.data = response;
