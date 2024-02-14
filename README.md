@@ -1,4 +1,4 @@
-# Fyle Frontend Challenge
+# Github users profile and repositories fetch using angular
 
 ##Overview
 This project is an Angular 14+ single-page application (SPA) designed to take a GitHub username as input and display the public repositories belonging to the user. It utilizes the GitHub API to fetch repository data and provides features like pagination, search, and a zero state for non-existent users.
